@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 limiter = Limiter()
 
-@app.route('/limit', methods=['GET'])
+@app.route('/limit', methods=['GET']) # example route
 def limit():
     ip_address = request.remote_addr  # Get client IP
     user_id = request.headers.get('user_id', 'anonymous') # default to anonymous if user_id is not provided
